@@ -12,6 +12,6 @@ git submodule add https://github.com/sebest-blog/gunicorn-with-docker/ gunicorn-
   - Remove the submodule inside the `.gitmodules` file.
 2. Remove the submodule folder from .
   - `git rm -fr gunicorn-docker/gunicorn-module`
-  - If you execute on the parent directory and not the submodule directory, delete the corresponding folder __inside__ `.git/modules/`
+  - Delete the corresponding folder __inside__ `.git/modules/`
 3. Delete the folder itself.
   - `rm -rf gunicorn-docker`
