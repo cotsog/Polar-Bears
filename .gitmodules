@@ -1,0 +1,3 @@
+[submodule "gunicorn-docker/gunicorn-module"]
+	path = gunicorn-docker/gunicorn-module
+	url = https://github.com/sebest-blog/gunicorn-with-docker/
