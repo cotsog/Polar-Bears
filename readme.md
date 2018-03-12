@@ -1,6 +1,12 @@
 # Docker Deployment Tests
-"Learning is recursion, recursion is recursion and recursion.""
+"Learning is recursion, recursion is recursion and recursion."
 Each step is explained individually.
+
+Run docker toolbox with this:
+- `bash --login '/Applications/Docker/Docker Quickstart Terminal.app/Contents/Resources/Scripts/start.sh'`
+
+Remove all docker containers.
+- `docker rm $(docker ps -aq)`
 
 ***
 ## Forgot how to add a submodule? No Problem! Here you go.

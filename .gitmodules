@@ -1,3 +1,18 @@
 [submodule "gunicorn-docker/gunicorn-module"]
 	path = gunicorn-docker/gunicorn-module
 	url = https://github.com/global2alex/gunicorn-with-docker
+[submodule "nginx-django-docker2/Ubuntu_17.10/rodan_code"]
+	path = nginx-django-docker2/Ubuntu_17.10/rodan_code
+	url = https://github.com/DDMAL/Rodan.git
+[submodule "nginx-django-docker2/Ubuntu_17.10/rodan-client_code"]
+	path = nginx-django-docker2/Ubuntu_17.10/rodan-client_code
+	url = https://github.com/DDMAL/rodan-client.git
+[submodule "nginx-django-docker2/Ubuntu_17.10/rodan_config/rodan_submodules/libmei"]
+	path = nginx-django-docker2/Ubuntu_17.10/rodan_config/rodan_submodules/libmei
+	url = https://github.com/DDMAL/libmei.git
+[submodule "nginx-django-docker2/Ubuntu_17.10/rodan_config/rodan_submodules/rodan_plugins"]
+	path = nginx-django-docker2/Ubuntu_17.10/rodan_config/rodan_submodules/rodan_plugins
+	url = https://github.com/DDMAL/rodan_plugins.git
+[submodule "nginx-django-docker2/Ubuntu_17.10/rodan_config/rodan_submodules/document-preprocessing-toolkit"]
+	path = nginx-django-docker2/Ubuntu_17.10/rodan_config/rodan_submodules/document-preprocessing-toolkit
+	url = https://github.com/DDMAL/document-preprocessing-toolkit

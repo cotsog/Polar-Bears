@@ -1,0 +1,10 @@
+version: '3'
+services:
+  os:
+    build:
+      context: ./Ubuntu_17.10
+      args:
+        - pgversion=9.6
+    volumes:
+      - ./Ubuntu_17.10/rodan_code:/rodan_code
+      - ./Ubuntu_17.10/rodan-client_code:/rodan-client_code

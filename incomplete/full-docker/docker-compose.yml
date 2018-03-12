@@ -1,0 +1,10 @@
+version: '3'
+services:
+  os:
+    container_name: django-web-container
+    volumes:
+      - /config:/config
+    build:
+      context: .
+    ports:
+      - "8000:8000"

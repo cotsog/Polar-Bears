@@ -1,0 +1,17 @@
+._.DS_Store
+.DS_Store
+npm-debug.log
+node_modules/
+dist
+web
+bundle
+js/Plugins.js
+tmp
+website/_site
+configuration.json
+._*
+
+__*
+src/js/.plugins.js
+plugins.json
+package-lock.json
