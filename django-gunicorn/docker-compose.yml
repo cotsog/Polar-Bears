@@ -1,0 +1,11 @@
+version: '3'
+services:
+  gunicorn:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: /my_app/start.sh
+    ports:
+      - "8000:8000"
+    # volumes:
+    #   - /my_app:/my_app
