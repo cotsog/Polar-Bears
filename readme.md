@@ -6,6 +6,9 @@ Each step is explained individually.
 ## Forgot how to add a submodule? No Problem! Here you go.
 git submodule add https://github.com/sebest-blog/gunicorn-with-docker/ gunicorn-docker/gunicorn-module
 
+## If you're using docker toolbox, use your docker-machine ip instead of localhost.
+`192.168.99.100`
+
 ## You have to remove submodules manually... Why? I don't know, it's just lame like that.
 1. Either run the first or second option, depending on if you already have submodules that you want to keep.  
   - `git rm -f .gitmodules`
