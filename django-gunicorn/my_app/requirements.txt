@@ -1,2 +1,4 @@
 Django==1.11.11
 gunicorn==19.6.0
+pytz==2018.3
+uWSGI==2.0.17
