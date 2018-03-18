@@ -1,11 +1,12 @@
 version: '3'
 services:
   gunicorn:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    command: /my_app/start.sh
+    # build:
+    #   context: .
+    #   dockerfile: Dockerfile
+    image: gunicorn_django
     ports:
       - "8000:8000"
-    # volumes:
-    #   - /my_app:/my_app
+    volumes:
+      - /my_app:/my_app
+    tty: true
