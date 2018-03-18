@@ -10,3 +10,4 @@ services:
     volumes:
       - /my_app:/my_app
     tty: true
+    env_file: ./my_app/.env
