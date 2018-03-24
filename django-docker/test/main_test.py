@@ -2,7 +2,7 @@ import unittest
 import requests
 
 # [TODO] Split for each service and each function.
-# [TODO] Should I automatically grab the machine-ip from docker? 
+# [TODO] Should I automatically grab the machine-ip from docker?
 
 def webpage_isup(ip, port):
     try:
@@ -15,7 +15,7 @@ def webpage_isup(ip, port):
     except:
         return False
 
-class TestDjangoBrowser(unittest.TestCase):
+class TestBrowser(unittest.TestCase):
 
     def test_api_isup(self):
         self.assertTrue(webpage_isup('192.168.99.101', ':8000'))
