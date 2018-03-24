@@ -34,8 +34,13 @@
       depends_on:
         - db
   ```
+#### Important
+If you run gunicorn as the command instead, it won't update itself so well in development.
 
-## Create the Django-Docker container
+#### Unittest
+Run them from the root of the django-docker project with `python -m unittest discover ./test  "*_test.py"`
+
+#### Create the Django-Docker container
 1. Create the django project.
   - `docker-compose run web django-admin.py startproject code/my_django_project .`
 2. Run Migrate in django.
@@ -47,7 +52,7 @@
 
 
 ***
-## In case you forgot how to make or enter a python environment.
+#### In case you forgot how to make or enter a python environment.
 1. Create a python virtual environment.
   - `python3 -m venv python_env`
 2. Enter the python environment.
@@ -60,23 +65,23 @@
 
 ***
 
-# Test gunicorn with django project
+## Usefull commands
 
-### Build command:
+#### Build command:
 `docker build -t weird_funky_title .`
 
-### Run command:
+#### Run command:
 `docker run -it -p 8000:8000 weird_funky_title /my_app/start_gunicorn.sh`
 
 
-### Delete all containers
+#### Delete all containers
 `docker rm $(docker ps -a -q)`
-### Delete all images
+#### Delete all images
 `docker rmi $(docker images -q)`
 
-### first, get the images on your system and their ids
+#### first, get the images on your system and their ids
 $ docker images
-### use one of those ids to take a closer look
+#### use one of those ids to take a closer look
 $ docker inspect image-id
 
-### look out for the "Env" entries
+#### look out for the "Env" entries

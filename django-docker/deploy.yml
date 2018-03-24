@@ -1,0 +1,12 @@
+version: '3'
+services:
+  # db:
+  #   image: postgres
+  web:
+    image: django-docker
+    command: bash -c '/code/start_gunicorn.sh'
+    # ports:
+    #   - "8000:8000"
+    # depends_on:
+    #   - db
+    # env_file: ./config/production.env ? This is ok until you make a swarm, I'm fairly certain but haven't looked into it yet.

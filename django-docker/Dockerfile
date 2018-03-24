@@ -1,4 +1,4 @@
-FROM python:3
+FROM python:3 AS django-docker
 ENV PYTHONUNBUFFERED 1
 RUN mkdir /code
 WORKDIR /code
