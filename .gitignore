@@ -2,4 +2,5 @@
 *.DS_Store
 *python_env/
 __init__.py
-*.env
+production.env
+*.pyc

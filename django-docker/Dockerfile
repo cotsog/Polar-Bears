@@ -4,4 +4,6 @@ RUN mkdir /code
 WORKDIR /code
 ADD requirements.pip /code/
 RUN pip3 install -r requirements.pip
-ADD . /code/
+ADD ./my_app_test /code/
+
+EXPOSE 8000

@@ -54,3 +54,29 @@
   - `. python_env/bin/activate`
 3. Install dependencies for django.
   - `pip3 install -r requirements.pip`
+
+
+
+
+***
+
+# Test gunicorn with django project
+
+### Build command:
+`docker build -t weird_funky_title .`
+
+### Run command:
+`docker run -it -p 8000:8000 weird_funky_title /my_app/start_gunicorn.sh`
+
+
+### Delete all containers
+`docker rm $(docker ps -a -q)`
+### Delete all images
+`docker rmi $(docker images -q)`
+
+### first, get the images on your system and their ids
+$ docker images
+### use one of those ids to take a closer look
+$ docker inspect image-id
+
+### look out for the "Env" entries
