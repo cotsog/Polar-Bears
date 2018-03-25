@@ -9,6 +9,7 @@
 
 __NOTES:__
 - Develop with `docker-compose up`, the `my_app_test` folder is actually a docker volume.
+- Run unittests with ``python -m unittest discover ./test  "*_test.py"``
 - Gunicorn is not recommended during development, only deployment.
 
 ## Tasks
