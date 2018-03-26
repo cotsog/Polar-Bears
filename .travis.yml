@@ -23,7 +23,4 @@ before_installl:
 services:
   - docker
 
-
-
-install:
-  - pip install -r requirements.pip
+script: docker-machine ip
