@@ -4,7 +4,7 @@ python:
 env:
   DOCKER_COMPOSE_VERSION: 1.19.0
 
-before_installl:
+before_install:
   - sudo apt-get update
   - sudo apt-get install -o Dpkg::Options::="--force-confold" --force-yes -y docker-engine
   - docker-compose --version
@@ -15,8 +15,9 @@ before_installl:
   - docker-compose --version
   - docker pull global2alex/polar-bear
   - docker-compose up
+  - docker ps -a
 
 services:
   - docker
 
-script: docker ps -a
+script: python -m unittest discover ./test  "*_test.py"
