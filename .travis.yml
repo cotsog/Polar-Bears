@@ -1,12 +1,48 @@
 language: python
-python:
-    - "3.6"
+matrix:
+    include:
+        - os: linux
+          sudo: required
+          python: 3.2
+          env: TOXENV=py32
+        - os: linux
+          sudo: required
+          python: 3.3
+          env: TOXENV=py33
+        - os: linux
+          sudo: required
+          python: 3.4
+          env: TOXENV=py34
+        - os: linux
+          sudo: required
+          python: 3.5
+          env: TOXENV=py35
+        - os: linux
+          sudo: required
+          python: 3.6
+          env: TOXENV=py36
+        - os: osx
+          language: generic
+          env: TOXENV=py32
+        - os: osx
+          python: 3.6
+          env: TOXENV=py36
+
+
 env:
   DOCKER_COMPOSE_VERSION: 1.19.0
 
 before_install:
+  # Forcefully remove old docker version, and install the newest version.
+  - sudo apt-get remove docker docker-engine docker.io docker-ce
+  - sudo apt-get install -y apt-transport-https ca-certificates curl
+  - sudo apt-get install -y software-properties-common
+  - curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
   - sudo apt-get update
-  - sudo apt-get install --only-upgrade -y docker
+  - sudo apt-get install -y docker-ce
+
+  # Print the latest version, grab the latest image, run the image and print
+  # information about running containers.
   - docker-compose --version
   - docker pull global2alex/polar-bears
   - docker-compose up -d

@@ -2,15 +2,10 @@
 "Learning is recursion, recursion is recursion and more recursion"
 - Each step is explained individually
 
-# __**Temporary**__
-__Once tests are written with docker development and coveralls in mind, these tags will be removed.__
-
 | Service      | Master        | Develop  |
 | ------------ |:-------------:| :--------:|
 | Travis-CI    | [![Build Status](https://travis-ci.org/global2alex/Polar-Bears.svg?branch=master)](https://travis-ci.org/global2alex/Polar-Bears)| [![Build Status](https://travis-ci.org/global2alex/Polar-Bears.svg?branch=develop)](https://travis-ci.org/global2alex/Polar-Bears) |
-| Coveralls    | -    | - |
 
-# __**End Temporary**__
 
 ## Working
 - Django 2.0.3
