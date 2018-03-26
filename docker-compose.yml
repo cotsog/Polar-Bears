@@ -4,7 +4,7 @@ services:
     image: postgres
   web:
     build: .
-    # image: django-docker
+    # image: global2alex/polar-bears
     command: python3 manage.py runserver 0.0.0.0:8000
     volumes:
       - ./my_app_test:/code

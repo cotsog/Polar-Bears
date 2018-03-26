@@ -8,7 +8,7 @@ before_install:
   - sudo apt-get update
   - sudo apt-get install --only-upgrade -y docker
   - docker-compose --version
-  - docker pull global2alex/polar-bear
+  - docker pull global2alex/polar-bears
   - docker-compose up
   - docker ps -a
 
