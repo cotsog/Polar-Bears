@@ -4,23 +4,21 @@ python:
 env:
   DOCKER_COMPOSE_VERSION: 1.19.0
 
-before_installl:
+before_install:
   - sudo apt-get update
-  - sudo apt-get install -o Dpkg::Options::="--force-confold" --force-yes -y docker-engine
+  - sudo apt-get install --only-upgrade -y docker
   - docker-compose --version
+  - docker pull global2alex/polar-bears
+  - docker-compose up -d
+  - docker ps -a
 
-  - sudo rm /usr/local/bin/docker-compose
-  - curl -L https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-`uname -s`-`uname -m` > docker-compose
-  - chmod +x docker-compose
-  - sudo mv docker-compose /usr/local/bin
-  - docker-compose --version
-
-  - docker pull global2alex/polar-bear
-  - docker-compose up
-
-  - docker ps
+  # - sudo rm /usr/local/bin/docker-compose
+  # - curl -L https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-`uname -s`-`uname -m` > docker-compose
+  # - chmod +x docker-compose
+  # - sudo mv docker-compose /usr/local/bin
+  # - docker-compose --version
 
 services:
   - docker
 
-script: docker-machine ip
+script: python -m unittest discover ./test  "*_test.py"

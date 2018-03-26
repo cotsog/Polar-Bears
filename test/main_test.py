@@ -18,9 +18,11 @@ def webpage_isup(ip, port):
 class TestBrowser(unittest.TestCase):
 
     def test_api_isup(self):
-        self.assertTrue(webpage_isup('192.168.99.101', ':8000'))
+        # self.assertTrue(webpage_isup('192.168.99.101', ':8000'))
+        self.assertTrue(webpage_isup('localhost', ':8000'))
     def test_api_isnotdown(self):
-        self.assertFalse(webpage_isup('192.168.99.101', ':8'))
+        # self.assertFalse(webpage_isup('192.168.99.101', ':8'))
+        self.assertFalse(webpage_isup('localhost', ':8'))
 
 
 

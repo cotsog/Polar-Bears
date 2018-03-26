@@ -9,12 +9,12 @@
   ENV PYTHONUNBUFFERED 1
   RUN mkdir /code
   WORKDIR /code
-  ADD requirements.pip /code/
-  RUN pip install -r requirements.pip
+  ADD requirements.txt /code/
+  RUN pip install -r requirements.txt
   ADD . /code/
   ```
 2. Make a python requirements file for your ideal environment. Place it where the dockerfile above will find it.
-  - `pip3 freeze > requirements.pip`
+  - `pip3 freeze > requirements.txt`
 3. Make a docker-compose file.
   - With the following contents:
 
@@ -41,7 +41,7 @@
 1. Create the django project.
   - `docker-compose run web django-admin.py startproject code/my_django_project .`
 2. Run Migrate in django.
-  - `docker-compose run web pip3 install -r requirements.pip && python3 manage.py migrate && python3 manage.py runserver 0.0.0.0:8000`
+  - `docker-compose run web pip3 install -r requirements.txt && python3 manage.py migrate && python3 manage.py runserver 0.0.0.0:8000`
 3. Build the image.
   - `docker-compose up`
 4. Visit the site.
@@ -57,7 +57,7 @@
 2. Enter the python environment.
   - `. python_env/bin/activate`
 3. Install dependencies for django.
-  - `pip3 install -r requirements.pip`
+  - `pip3 install -r requirements.txt`
 
 #### Build command:
 `docker build -t weird_funky_title .`
