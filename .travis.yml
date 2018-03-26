@@ -16,8 +16,10 @@ before_installl:
   - docker-compose --version
 
   - docker pull global2alex/polar-bear
+  - docker-compose up
+  - docker ps -a
 
 services:
   - docker
 
-script: docker-compose up && docker ps -a
+script: echo 'Hello'
