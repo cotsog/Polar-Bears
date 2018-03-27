@@ -10,10 +10,12 @@ matrix:
           python: 3.6
           env: TOXENV=py36
         - os: osx
-          python: 2.7
+          # python: 2.7
+          language: generic
           env: TOXENV=py27
         - os: osx
-          python: 3.6
+          # python: 3.6
+          language: generic
           env: TOXENV=py36
 
 
@@ -21,12 +23,15 @@ matrix:
 #   DOCKER_COMPOSE_VERSION: 1.19.0
 
 before_install:
-  # Update to the latest stable version of docker.
+  # Get some system info for trouble shooting
   - echo ----Polar_Bears--------------------------------------------------------
   - pwd
   - ls -al
-  - chmod u+x ./install/os_splitter.sh
-  - ./install/os_splitter.sh
+  - env
+
+  # Update to the latest stable version of docker.
+  - chmod u+x /home/travis/build/global2alex/Polar-Bears/install/os_splitter.sh
+  - /home/travis/build/global2alex/Polar-Bears/install/os_splitter.sh
 
   # Print the latest version, grab the latest image, run the image and print
   # information about running containers.
