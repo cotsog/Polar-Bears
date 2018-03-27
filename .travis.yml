@@ -22,6 +22,9 @@ matrix:
 
 before_install:
   # Update to the latest stable version of docker.
+  - echo ----Polar_Bears--------------------------------------------------------
+  - ls -al
+  - chmod u+x ./install/os_splitter.sh
   - ./install/os_splitter.sh
 
   # Print the latest version, grab the latest image, run the image and print
