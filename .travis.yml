@@ -1,4 +1,5 @@
 language: python
+cache: pip
 matrix:
     include:
         - os: linux
@@ -30,7 +31,7 @@ before_install:
   - env
 
   # Update to the latest stable version of docker.
-  - sudo chmod u+x /home/travis/build/global2alex/Polar-Bears/install/os_splitter.sh
+  - chmod u+x /home/travis/build/global2alex/Polar-Bears/install/os_splitter.sh
   - /home/travis/build/global2alex/Polar-Bears/install/os_splitter.sh
 
   # Print the latest version, grab the latest image, run the image and print
@@ -40,6 +41,8 @@ before_install:
   - docker-compose up -d
   - docker ps -a
 
+  - which python
+  - which python3
   # - sudo rm /usr/local/bin/docker-compose
   # - curl -L https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-`uname -s`-`uname -m` > docker-compose
   # - chmod +x docker-compose
@@ -49,4 +52,4 @@ before_install:
 services:
   - docker
 
-script: python -m unittest discover ./test  "*_test.py"
+script: pyenv -m unittest discover ./test  "*_test.py"
