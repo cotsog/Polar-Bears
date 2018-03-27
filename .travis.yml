@@ -11,7 +11,8 @@ before_install:
   - docker pull global2alex/polar-bears
   - docker-compose up -d
   - docker ps -a
-  - docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' polarbears_web
+  - docker inspect polarbears_web
+  - docker inspect --format '{{ .NetworkSettings.IPAddress }}' polarbears_web
 
   # - sudo rm /usr/local/bin/docker-compose
   # - curl -L https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-`uname -s`-`uname -m` > docker-compose
