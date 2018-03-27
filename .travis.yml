@@ -30,7 +30,7 @@ before_install:
   - env
 
   # Update to the latest stable version of docker.
-  - chmod u+x /home/travis/build/global2alex/Polar-Bears/install/os_splitter.sh
+  - sudo chmod u+x /home/travis/build/global2alex/Polar-Bears/install/os_splitter.sh
   - /home/travis/build/global2alex/Polar-Bears/install/os_splitter.sh
 
   # Print the latest version, grab the latest image, run the image and print
